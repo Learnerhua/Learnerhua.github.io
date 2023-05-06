@@ -1,0 +1,208 @@
+---
+title: "<span style='font-size: 28pt;'>ChatGPT 注册教程</span>"
+author: "oyjh"
+date: "2023/5/6"
+output: 
+  html_document:
+    css: "styles.css"
+---
+
+<style>
+  .title, .author, .date {
+    text-align: center;
+  }
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+**目录：**  
+
+- [前言](#introduction)
+- [科学上网](#scientific_internet)
+- [注册和使用ChatGPT](#register_use)
+- [辅助插件](#plugin)
+- [API接口](#API)
+- [注意事项](#Notice)
+- [镜像网站](#mirror)
+- [联系方式](#contact)
+
+
+
+
+  
+## 前言 {#introduction}
+**ChatGPT**，全称 聊天生成预训练转换器（**Chat** **G**enerative **P**re-trained **T**ransformer），是OpenAI公司（<https://openai.com/>）于2022年11月30日推出的人工智能聊天机器人程序，该程序使用基于GPT-3.5、GPT-4架构的大型语言模型并以强化学习训练。ChatGPT目前仍以文字方式交互，而除了可以用人类自然对话方式来交互，还可以用于甚为复杂的语言工作，包括自动生成文本、自动问答、自动摘要等多种任务。如：在自动文本生成方面，ChatGPT可以根据输入的文本自动生成类似的文本（剧本、歌曲、企划等），在自动问答方面，ChatGPT可以根据输入的问题自动生成答，还有编写和调试计算机程序的能力。  
+  
+2023年年初，ChatGPT在全球火爆，掀起了全球人工智能大型语言模型（LLM）的竞赛狂潮，微软，谷歌等互联网巨头相继加入赛道，国内的许多头部企业，如百度，阿里等也陆续推出了自己的语言模型，在这场“第四次产业革命”的浪潮中，谁若跟不上时代的步伐，必将被时代淘汰。
+  
+我是在2022年12月6日开始注册使用ChatGPT的，注册成功后我立马将其投入到了日常的工作学习中，ChatGPT的强大令人震惊，它的使用极大地提高了我的工作和学习效率，举例来说，以往需要花费很多时间（甚至是一整天时间）来解决的程序运行中出现的bug，现在用ChatGPT可能只需要几秒便能得到准确的答案，它的文本生成能力同样强大，能够快速准确地翻译英文语句，对论文进行润色（可以以指定的风格进行润色），只要输入合适的指令，它几乎能生成任何人们想要的文本。  
+  
+时至今日，身边仍有许多朋友不太清楚如何注册并使用ChatGPT（它的注册过程确实繁琐，并且审核确实越来越严格），作为第一批使用ChatGPT的用户，我在这方面积累了一定的使
+用经验，“独乐乐不如众乐乐”，在这里我写了一个简单的教程，将自己的使用（注册）经验分享给大家，希望能对大家有所帮助。
+
+## 科学上网 {#scientific_internet}
+ChatGPT目前还无法在国内的网络环境下使用，因此要在国内使用的话我们需要挂上VPN，使用国外的ip注册并使用ChatGPT，也就是俗称的“翻墙”。
+目前市面上能够用于翻墙的软件有很多，我在这里列出几个：  
+
+- [Qv2ray](https://github.com/Qv2ray/Qv2ray/releases)
+- [Clash](https://github.com/Fndroid/clash_for_windows_pkg/releases)
+- [Greenhub](https://greenhubtx.ga/?utm_source=desktop&utm_medium=click&utm_campaign=about)
+- [TLY](https://tly.com/zh/app.php)
+- [cloudyu](https://cloudyu.top/#/login)  
+  
+在上面的软件中，**Qv2ray**和**Clash**是最安全，稳定，专业的，我自己的使用的也是Qv2ray，但是它的安装过程和其他的“傻瓜式”软件相比略显繁琐，总的来说就是要先装一个软件，再装软件的核心，验证通过后再添加机场订阅链接(推荐一个机场：<https://shuttle.gt-in.com/clientarea.php>)，然后即可选择自己想要代理的节点。由于VPN的使用并不是本教程的核心内容，在这里我推荐一个网上的教程供大家参考，（[点击这里](https://sites.google.com/view/honven/%E9%A6%96%E9%A1%B5/qv2ray%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B)）。
+  
+配置好VPN后可以尝试打开Chrome浏览器使用Google搜索感兴趣的内容，如果能够正常使用则说明VPN配置成功。
+  
+  
+## 注册和使用ChatGPT{#register_use}
+**这一节是本教程的主要内容，请务必仔细阅读。**  
+  
+1. **进入OpenAI的官网注册ChatGPT账号**  
+OpenAI官网：<https://openai.com/>  
+进入后找到并点击*Try ChatGPT*,随后点击*Sign up*
+```{r, echo=FALSE, fig.align='center',out.width="80%"}
+knitr::include_graphics(c("images/enter.jpg"))
+```
+
+```{r, echo=FALSE, fig.align='center',out.width="50%"}
+knitr::include_graphics(c("images/register.jpg"))
+```
+
+2. **输入注册邮箱号，并按照要求设置密码**  
+<p style="font-size: 16px;">*使用qq邮箱可能会导致无法注册，建议使用163邮箱或谷歌邮箱等其他邮箱。*</p>
+```{r, echo=FALSE, fig.align='center',out.width="50%"}
+knitr::include_graphics(c("images/email.jpg"))
+```
+
+```{r, echo=FALSE, fig.align='center',out.width="50%"}
+knitr::include_graphics(c("images/password.jpg"))
+```
+密码设置成功后点击*确定*，会让你填姓名和出生日期，这个随便填就行，一般不会出错
+
+```{r, echo=FALSE, fig.align='center',out.width="50%"}
+knitr::include_graphics(c("images/birthday.jpg"))
+```
+
+
+3. **验证手机号**  
+**注意，这是本教程中最核心和关键的步骤，绝大多数人注册都是卡在了这一步。**  
+ChatGPT在使用之前必须先用国外的手机号注册，注意，不是随便哪个国家都可以，而是要用OpenAI提供服务的国家，ChatGPT官方并没有列出哪些国家能使用，但是根据网友实测，建议使用以下地区的电话进行验证：
+- 美国：United States
+- 加拿大：Canada
+- 英国：United Kingdom
+- 澳大利亚：Australia
+- 意大利：Italy
+- 法国：France
+- 德国：Germany
+- 荷兰：Netherlands
+- 芬兰：Finland
+- 瑞典：Sweden
+- 丹麦：Denmark
+- 挪威：Norway
+- 日本：Japan
+- 新加坡：Singapore
+
+```{r, echo=FALSE, fig.align='center',out.width="50%"}
+knitr::include_graphics(c("images/country_selected.jpg"))
+```
+
+选择完国家后，我们需要该国家的手机号，如何找到呢？我们可以去一些网站购买虚拟手机号用于接收验证码，这里我推荐一个网站**sms-activate**：<https://sms-activate.org/cn>  
+进入该网站后在左侧栏选择你需要接收验证码的**应用**以及虚拟手机号所在的**国家**
+
+```{r, echo=FALSE, fig.align='center',out.width="50%"}
+knitr::include_graphics(c("images/sms_1.jpg"))
+```
+
+然后根据你选择的国家旁边标注的价格进行充值（这个网站是由俄罗斯人开发的，因此货币都显示为卢布），点击右上角的 *充值* 按钮，可以使用支付宝进行方便快捷的支付
+
+```{r, echo=FALSE, fig.align='center',out.width="50%"}
+knitr::include_graphics(c("images/sms_2.jpg"))
+```
+充值完之后，点击购物车图标进行购买  
+
+```{r, echo=FALSE, fig.align='center',out.width="50%"}
+knitr::include_graphics(c("images/sms_3.jpg"))
+```
+
+购买成功后会来到短信激活界面，在这里会给出一个你所选国家的虚拟号码，然后将这个号码复制到ChatGPT需要输入手机号的界面，点击*Send code via SMS*
+
+```{r, echo=FALSE, fig.align='center',out.width="50%"}
+knitr::include_graphics(c("images/sms_4.jpg"))
+```
+
+```{r, echo=FALSE, fig.align='center',out.width="50%"}
+knitr::include_graphics(c("images/message.jpg"))
+```
+
+这个时候，有极大概率出现短信发送不出的情况，如下图所示：
+
+```{r, echo=FALSE, fig.align='center',out.width="50%"}
+knitr::include_graphics(c("images/error.jpg"))
+```
+
+<font color="red"><b>这个时候不用慌！只需要更改VPN的节点即可，就是不停地变化ip地址，然后刷新注册界面重试，直到能够发出短信为止。</b></font>  
+发出短信后，会在sms-activate网站地激活界面收到验证码，再将验证码输入到openAI的注册界面即可。
+
+```{r, echo=FALSE, fig.align='center',out.width="80%"}
+knitr::include_graphics(c("images/sms_5.jpg"))
+```
+
+4. **使用ChatGPT**  
+填完验证码后如无意外即可顺利进入ChatGPT界面，在搜索框直接输入问题即可提问
+```{r, echo=FALSE, fig.align='center',out.width="80%"}
+knitr::include_graphics(c("images/chatGPT.jpg"))
+```
+还可以根据个人爱好在左下角 *setting* 处更改主题颜色，（我个人一般都会改成深色）  
+  
+**至此，chatGPT的注册终于大功告成！**
+<p style="font-size: 16px;">*（免费版的ChatGPT是基于GPT-3.5模型训练的，要想升级到GPT-4获得更佳的使用体验需要充值Plus会员）*</p>
+
+## 辅助插件 {#plugin}
+ChatGPT火爆后许多相关的浏览器插件也被迅速开发出来，这里我以谷歌历览器为例，推荐几款常用的chatGPT插件。不熟悉浏览器插件使用方法的可以先去看一下[官方教程](https://support.google.com/chromebook/answer/2588006?hl=zh-Hans)
+
+|名字|描述|
+|----|----|
+|ChatGPT for Google|在搜索引擎结果中同时显示ChatGPT的回答|
+|WebChatGPT|使用来自网络的相关结果增强您的 ChatGPT 提示|
+|Monica|ChatGPT 驱动的副驾驶，能够回答您的问题或帮您撰写电子邮件。适用于所有网站。|  
+  
+  
+## API {#API}
+API接口指的是应用程序接口（**Application Programming Interface**），是一种用于软件系统之间进行交互的协议。API接口可以使不同的软件系统之间相互通信和交换数据，从而实现各种复杂的功能。  
+ChatGPT同样也提供API接口，获取API的方法如下：  
+进入<https://platform.openai.com/overview>，先在右上角登录ChatGPT账号，然后选择右上角的view API keys，然后创建自己的key。  
+**注意**：每个API key只显示一次，因此要及时保存，且不能将key泄露出去，否则可能会危及账号安全。
+```{r, echo=FALSE, fig.align='center',out.width="80%"}
+knitr::include_graphics(c("images/API.jpg"))
+```
+
+## 注意事项 {#Notice}
+ChatGPT有时可能会被封禁，导致无法使用，有网友整理了如下的封禁原因：  
+
+1. 批量注册：通过相同或类似IP地址批量注册的账号
+2. IP地址：经常切换节点或账号同时挂载了多个地区的IP（共享号），或者频繁尝试通过不支持的区域访问（如香港）
+3. API滥用：在不支持的地区使用API，或者利用多个账号获取API并对外提供服务
+4. 聊天全是中文：不会直接封，但会上调风控级别，增加封号概率
+5. 账号风险：注册时使用接码平台的电话号码，或者用于付款的银行卡存在风险
+6. 账号登录：同一台机子先后登录不同账号，增加封号概率
+
+<font color="red"><b>但是，大都数情况下封的都是ip而不是账号!（本人就遇到过这种情况） 这时只需将浏览器上与OpenAI有关的Cookies删除，并更换节点再重新登录ChatGPT即可。</b></font>   
+[如何删除浏览器中的cookie（以chrome为例）](https://support.google.com/chrome/answer/95647?hl=zh-Hans&co=GENIE.Platform%3DDesktop#zippy=%2C%E5%88%A0%E9%99%A4%E6%9D%A5%E8%87%AA%E6%9F%90%E4%B8%AA%E7%BD%91%E7%AB%99%E7%9A%84-cookie)
+
+## 镜像网站 {#mirror}
+镜像网站（**mirror website**）指的是一个网站的内容被复制到一个或多个其他服务器上，以便在多个地点提供相同的内容。镜像网站通常用于提高访问速度、增加可靠性、减轻源网站的负载压力等方面。  
+当没有ChatGPT账号或者无法使用VPN时，可以尝试使用ChatGPT的镜像网站。
+Github上有人总结了chatGPT相关的免费镜像网站合集：<https://github.com/LiLittleCat/awesome-free-chatgpt>  
+此外某些浏览器插件也能提供类似的功能，例如[Wetab](https://chrome.google.com/webstore/detail/wetab-%E6%96%B0%E6%A0%87%E7%AD%BE%E9%A1%B5%E5%B7%B2%E6%95%B4%E5%90%88chatgpt/aikflfpejipbpjdlfabpgclhblkpaafo?hl=zh-CN)
+
+## 联系方式 {#contact}
+在本教程中遇到任何问题请联系  oyjh417701@163.com  
+
+
+<font color="black"><b>May 6 CST 2023    
+Copyright (c) 2023 OYJH  
+All Rights Reserved.  </b></font>  
+
