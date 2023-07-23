@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>1 数据科学与R语言 | R语言入门学习笔记</title>
+<meta name="author" content="欧阳继华">
+<meta name="description" content="1.1 数据科学 一门科学只有当它达到了能够成功地运用数学时，才算真正发展了。                              ———— 卡尔·马克思  图1.1: 马克思数学手稿（1974年版）  马克思数学手稿（Mathematical Manuscripts of Karl Marx）是19世纪德国哲学家、经济学家、社会学家卡尔·马克思（Karl...">
+<meta name="generator" content="bookdown 0.34 with bs4_book()">
+<meta property="og:title" content="1 数据科学与R语言 | R语言入门学习笔记">
+<meta property="og:type" content="book">
+<meta property="og:description" content="1.1 数据科学 一门科学只有当它达到了能够成功地运用数学时，才算真正发展了。                              ———— 卡尔·马克思  图1.1: 马克思数学手稿（1974年版）  马克思数学手稿（Mathematical Manuscripts of Karl Marx）是19世纪德国哲学家、经济学家、社会学家卡尔·马克思（Karl...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="1 数据科学与R语言 | R语言入门学习笔记">
+<meta name="twitter:description" content="1.1 数据科学 一门科学只有当它达到了能够成功地运用数学时，才算真正发展了。                              ———— 卡尔·马克思  图1.1: 马克思数学手稿（1974年版）  马克思数学手稿（Mathematical Manuscripts of Karl Marx）是19世纪德国哲学家、经济学家、社会学家卡尔·马克思（Karl...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.5.0/transition.js"></script><script src="libs/bs3compat-0.5.0/tabs.js"></script><script src="libs/bs3compat-0.5.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<style type="text/css">
+    /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+        }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
+  </style>
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">R语言入门学习笔记</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">前言</a></li>
+<li><a class="" href="%E4%BD%9C%E8%80%85%E7%AE%80%E4%BB%8B.html">作者简介</a></li>
+<li class="book-part">基础篇</li>
+<li><a class="active" href="DataScience-and-R.html"><span class="header-section-number">1</span> 数据科学与R语言</a></li>
+<li><a class="" href="R-installation.html"><span class="header-section-number">2</span> R的安装与环境的配置</a></li>
+<li><a class="" href="object-variable.html"><span class="header-section-number">3</span> 对象与变量</a></li>
+<li><a class="" href="data-structure.html"><span class="header-section-number">4</span> 数据基本结构</a></li>
+<li><a class="" href="%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE.html">参考文献</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="DataScience-and-R" class="section level1" number="1">
+<h1>
+<span class="header-section-number">1</span> 数据科学与R语言<a class="anchor" aria-label="anchor" href="#DataScience-and-R"><i class="fas fa-link"></i></a>
+</h1>
+<div id="DataScience" class="section level2" number="1.1">
+<h2>
+<span class="header-section-number">1.1</span> 数据科学<a class="anchor" aria-label="anchor" href="#DataScience"><i class="fas fa-link"></i></a>
+</h2>
+<p><strong>一门科学只有当它达到了能够成功地运用数学时，才算真正发展了。</strong></p>
+<pre><code>                                                          ———— 卡尔·马克思</code></pre>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:unnamed-chunk-1"></span>
+<img src="images/mks.jpeg" alt="马克思数学手稿（1974年版）" width="50%" height="50%"><p class="caption">
+图1.1: 马克思数学手稿（1974年版）
+</p>
+</div>
+<p><strong>马克思数学手稿（Mathematical Manuscripts of Karl Marx）</strong>是19世纪德国哲学家、经济学家、社会学家<a href="https://zh.wikipedia.org/wiki/%E5%8D%A1%E5%B0%94%C2%B7%E9%A9%AC%E5%85%8B%E6%80%9D">卡尔·马克思（Karl Marx）</a>在1841年至1843年期间撰写的一些数学笔记和手稿。这些手稿在马克思生前未出版，直到1968年才首次出版,其涉及的主题包括微积分、微分方程、代数和几何学等。马克思对数学的研究主要是为了帮助他理解自然科学和经济学，他试图将数学的方法应用于社会科学，以便更好地理解社会经济现象的规律。</p>
+<p>数学作为一门基础学科，它的思维方式和工具方法能够为各个科学领域提供重要的支持和指导，如果一门科学没有数学，那么它很可能是一个相对较为表面的科学，难以深入理解和研究，例如，物理学需要数学来描述自然现象，如牛顿力学和爱因斯坦相对论需要微积分和张量分析等数学工具;化学需要数学来解决复杂的反应和分子结构，如量子化学和化学动力学需要统计学和微分方程等数学方法;生物学需要数学来研究生物系统的行为，如生态学和生物信息学需要统计学和图论等数学手段。</p>
+<p>我打小数学就不太行，高考数学更是直接拉了后腿，因此一直很佩服那些数学厉害的人，记得我的高中数学老师曾说过“数学是思维的体操”，I’ll say ! （个人认为）数学思维强的人智商一般都比较高，反应能力和逻辑推理能力也都会比较强，这些人相对而言更容易在自然科学领域做出瞩目的成果，最近在看Linus的传记<span class="citation">(<a href="%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE.html#ref-torvalds_just_2002">Torvalds and Diamond 2002</a>)</span>，他打小就是那种数学特别厉害的人，加上他对编程和操作系统疯狂的痴迷，这些因素最终让他能够开发出那个非凡的Linux操作系统！</p>
+<p>言归正传，<strong>什么是数据科学？</strong><br>
+数据科学是一种使用统计学、计算机科学和领域知识来分析和理解数据的跨学科领域。它涉及从大量数据中提取有用信息、探索和分析数据，以便为组织和决策者提供有意义的见解。
+(这个 <span class="citation">ChatGPT (<a href="%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE.html#ref-ChatGPT">2022</a>)</span> 给出的概念简单看一下就可以了，以后在实践中再慢慢体会吧.)
+<img src="images/data_science.png" width="80%" height="80%" style="display: block; margin: auto;"></p>
+<p>一句非常重要的话： <strong>编程是工具，统计是灵魂，专业是核心</strong><br>
+无论使用什么方法或工具，这些都只是解决问题的手段而已，你所要解决的问题才是你自始至终最应该关注的核心，千万不能本末倒置！</p>
+</div>
+<div id="R_intro_install" class="section level2" number="1.2">
+<h2>
+<span class="header-section-number">1.2</span> R语言简介<a class="anchor" aria-label="anchor" href="#R_intro_install"><i class="fas fa-link"></i></a>
+</h2>
+<p><strong>R的起源</strong><br>
+1992年，新西兰奥克兰大学统计学教授 Ross Ihaka 和 Robert Gentleman，为了方便地给学生教授统计学课程，他们设计开发了R语言（他们名字的首字母都是R）。</p>
+<p><strong>R的特色</strong><br><!-- 列表与正文之间注意要有一个空行 --></p>
+<ul>
+<li>R是一个统计编程语言（statistical programming）</li>
+<li>R可运行于多种平台之上，包括Windows、UNIX 和 Mac OS X</li>
+<li>R拥有顶尖水准的制图功能</li>
+<li>R是免费的</li>
+<li>R应用广泛，拥有丰富的库包</li>
+<li>活跃的社区</li>
+</ul>
+<strong>R的工作流程</strong><br>
+2019 年 8 月，国际统计学年会将<em>考普斯总统奖</em>（The Committee of Presidents of Statistical Societies Awards，简称 COPSS 奖，被誉为统计学的诺贝尔奖）奖颁给 tidyverse的作者Hadley Wickham，Hadley Wickham将数据科学流程分解成6个环节：
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:tidyverse-workflow"></span>
+<img src="images/tidyverse.png" alt="tidyverse运行流程" width="100%" height="100%"><p class="caption">
+图1.2: tidyverse运行流程
+</p>
+</div>
+<!-- 图片的引用方式是\@ref(fig:代码段的标签) -->
+<p>如图<a href="DataScience-and-R.html#fig:tidyverse-workflow">1.2</a>所示，即数据导入、数据规整、数据处理、可视化、建模以及形成可重复性报告，整个分析和探索过程都在一个程序代码中完成，这种方式对训练我们的数据思维非常有帮助。</p>
+<p><a href="https://www.tidyverse.org/">tidyverse</a><em>是R语言中的一个数据科学工具包集合，由Hadley Wickham及其团队开发，旨在提供一系列易于使用且功能强大的数据分析工具。tidyverse包含了多个互相协作的包，包括了ggplot2、dplyr、tidyr、readr、purrr等等。这些包都遵循了相同的设计哲学和编程风格，以及一些共同的数据结构和函数，使得用户可以通过一致的方式来进行数据清洗、转换、可视化和建模等操作。</em></p>
+<p><strong>tidyverse</strong>套餐：</p>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>宏包</th>
+<th>功能</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>ggplot2</td>
+<td>颜值担当</td>
+</tr>
+<tr class="even">
+<td>dplyr</td>
+<td>数据处理王者</td>
+</tr>
+<tr class="odd">
+<td>tidyr</td>
+<td>数据转换专家</td>
+</tr>
+<tr class="even">
+<td>readr</td>
+<td>数据载入利器</td>
+</tr>
+<tr class="odd">
+<td>purrr</td>
+<td>循环加速器</td>
+</tr>
+<tr class="even">
+<td>tibble</td>
+<td>强化数据框</td>
+</tr>
+<tr class="odd">
+<td>stringr</td>
+<td>字符串处理</td>
+</tr>
+<tr class="even">
+<td>forcats</td>
+<td>因子处理</td>
+</tr>
+</tbody>
+</table></div>
+<p>从下一章开始，我们将正式开始R语言的学习之旅！</p>
+</div>
+<div id="总结" class="section level2 unnumbered">
+<h2>总结<a class="anchor" aria-label="anchor" href="#%E6%80%BB%E7%BB%93"><i class="fas fa-link"></i></a>
+</h2>
+<p>本节的主要内容：</p>
+<ul>
+<li>简单介绍数据科学的概念</li>
+<li>简单介绍R以及tidyverse包</li>
+</ul>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="%E4%BD%9C%E8%80%85%E7%AE%80%E4%BB%8B.html">作者简介</a></div>
+<div class="next"><a href="R-installation.html"><span class="header-section-number">2</span> R的安装与环境的配置</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#DataScience-and-R"><span class="header-section-number">1</span> 数据科学与R语言</a></li>
+<li><a class="nav-link" href="#DataScience"><span class="header-section-number">1.1</span> 数据科学</a></li>
+<li><a class="nav-link" href="#R_intro_install"><span class="header-section-number">1.2</span> R语言简介</a></li>
+<li><a class="nav-link" href="#%E6%80%BB%E7%BB%93">总结</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>R语言入门学习笔记</strong>" was written by 欧阳继华. It was last built on 2023-07-21.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>

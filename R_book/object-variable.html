@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>3 对象与变量 | R语言入门学习笔记</title>
+<meta name="author" content="欧阳继华">
+<meta name="description" content="3.1 基本运算 可以把R语言当做计算器使用： 1 + 2 ## [1] 3 5 - 3 ## [1] 2 3 * 4 ## [1] 12 12 / 3 ## [1] 4 2^3 ## [1] 8 (2 + 4) / 3 ## [1] 2  3.2 对象...">
+<meta name="generator" content="bookdown 0.34 with bs4_book()">
+<meta property="og:title" content="3 对象与变量 | R语言入门学习笔记">
+<meta property="og:type" content="book">
+<meta property="og:description" content="3.1 基本运算 可以把R语言当做计算器使用： 1 + 2 ## [1] 3 5 - 3 ## [1] 2 3 * 4 ## [1] 12 12 / 3 ## [1] 4 2^3 ## [1] 8 (2 + 4) / 3 ## [1] 2  3.2 对象...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="3 对象与变量 | R语言入门学习笔记">
+<meta name="twitter:description" content="3.1 基本运算 可以把R语言当做计算器使用： 1 + 2 ## [1] 3 5 - 3 ## [1] 2 3 * 4 ## [1] 12 12 / 3 ## [1] 4 2^3 ## [1] 8 (2 + 4) / 3 ## [1] 2  3.2 对象...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.5.0/transition.js"></script><script src="libs/bs3compat-0.5.0/tabs.js"></script><script src="libs/bs3compat-0.5.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<style type="text/css">
+    /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+        }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
+  </style>
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">R语言入门学习笔记</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">前言</a></li>
+<li><a class="" href="%E4%BD%9C%E8%80%85%E7%AE%80%E4%BB%8B.html">作者简介</a></li>
+<li class="book-part">基础篇</li>
+<li><a class="" href="DataScience-and-R.html"><span class="header-section-number">1</span> 数据科学与R语言</a></li>
+<li><a class="" href="R-installation.html"><span class="header-section-number">2</span> R的安装与环境的配置</a></li>
+<li><a class="active" href="object-variable.html"><span class="header-section-number">3</span> 对象与变量</a></li>
+<li><a class="" href="data-structure.html"><span class="header-section-number">4</span> 数据基本结构</a></li>
+<li><a class="" href="%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE.html">参考文献</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="object-variable" class="section level1" number="3">
+<h1>
+<span class="header-section-number">3</span> 对象与变量<a class="anchor" aria-label="anchor" href="#object-variable"><i class="fas fa-link"></i></a>
+</h1>
+<div id="primary-calculation" class="section level2" number="3.1">
+<h2>
+<span class="header-section-number">3.1</span> 基本运算<a class="anchor" aria-label="anchor" href="#primary-calculation"><i class="fas fa-link"></i></a>
+</h2>
+<p>可以把R语言当做计算器使用：</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fl">1</span> <span class="op">+</span> <span class="fl">2</span></span></code></pre></div>
+<pre><code>## [1] 3</code></pre>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fl">5</span> <span class="op">-</span> <span class="fl">3</span></span></code></pre></div>
+<pre><code>## [1] 2</code></pre>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fl">3</span> <span class="op">*</span> <span class="fl">4</span></span></code></pre></div>
+<pre><code>## [1] 12</code></pre>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fl">12</span> <span class="op">/</span> <span class="fl">3</span></span></code></pre></div>
+<pre><code>## [1] 4</code></pre>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fl">2</span><span class="op">^</span><span class="fl">3</span></span></code></pre></div>
+<pre><code>## [1] 8</code></pre>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="op">(</span><span class="fl">2</span> <span class="op">+</span> <span class="fl">4</span><span class="op">)</span> <span class="op">/</span> <span class="fl">3</span></span></code></pre></div>
+<pre><code>## [1] 2</code></pre>
+</div>
+<div id="object" class="section level2" number="3.2">
+<h2>
+<span class="header-section-number">3.2</span> 对象<a class="anchor" aria-label="anchor" href="#object"><i class="fas fa-link"></i></a>
+</h2>
+<p>在R中存储的数据称为<strong>对象（object）</strong>，R语言数据处理实际上就是不断的创建和操控这些对象,对象可以理解成用来装数据和函数的盒子或容器（container）。<br><font color="#A5AAA3"><b>
+<em>和python类似，R语言也可以被理解成一种面向对象的编程语言</em></b></font></p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:create-object"></span>
+<img src="images/object.png" alt="R语言中的赋值操作" width="80%" height="80%"><p class="caption">
+图3.1: R语言中的赋值操作
+</p>
+</div>
+<p>如图<a href="object-variable.html#fig:create-object">3.1</a>所示，创建一个R对象，首先确定一个名称，然后使用赋值操作符 &lt;-，将数据赋值给它。（Windows操作系统中赋值的符号可以使用快捷键：ALT + -）</p>
+</div>
+<div id="variable" class="section level2" number="3.3">
+<h2>
+<span class="header-section-number">3.3</span> 变量<a class="anchor" aria-label="anchor" href="#variable"><i class="fas fa-link"></i></a>
+</h2>
+<p>这里的R对象在计算机编程语言中称之为<strong>变量（variable）</strong>，和其他编程语言类似，R语言中的变量也有自己的命名规则：</p>
+<ul>
+<li><font color="#90CBFB"><b>变量名必须以字母、数字、下划线_和句点.组成</b></font></li>
+<li><font color="#90CBFB"><b>变量名的第一个字符不能为数字</b></font></li>
+<li><font color="#90CBFB"><b>变量名的第一个字符如果是句点.，那么句点后面不能紧跟数字</b></font></li>
+<li><font color="#90CBFB"><b>变量名是区分大小写的，y和Y是两个不同的变量名</b></font></li>
+<li><font color="#90CBFB"><b>在中文环境下，汉字也可以作为变量名的合法字符使用，但不推荐使用</b></font></li>
+</ul>
+<p><strong>举例：</strong><br>
+1. 赋值变量</p>
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fl">10</span></span></code></pre></div>
+<ol start="2" style="list-style-type: decimal">
+<li>打印变量</li>
+</ol>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">x</span></span></code></pre></div>
+<pre><code>## [1] 10</code></pre>
+<p>3.使用变量</p>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">x</span> <span class="op">+</span> <span class="fl">90</span></span></code></pre></div>
+<pre><code>## [1] 100</code></pre>
+</div>
+<div id="attribute-type" class="section level2" number="3.4">
+<h2>
+<span class="header-section-number">3.4</span> 变量的属性和类型<a class="anchor" aria-label="anchor" href="#attribute-type"><i class="fas fa-link"></i></a>
+</h2>
+<p><strong>变量类型</strong><br>
+所有R对象都有其属性，其中最重要的两个属性是类型和长度,查看变量的类型可以使用<strong><em>typeof</em></strong>和<strong><em>class</em></strong>函数：</p>
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/typeof.html">typeof</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## [1] "double"</code></pre>
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## [1] "numeric"</code></pre>
+<p><font color="#A5AAA3"><b><em>在R语言中，double类型是双精度浮点数的类型。它代表一个十进制数，并且保留了一定的小数位数（通常是15到17位）。double类型是最常用的数值数据类型，因为它们可以用于处理小数值和大数值。在计算中，它们是高精度数字，因此适用于科学计算，统计学和工程应用。</em></b></font></p>
+<p><strong>关于class和typeof两个函数的区别如下：</strong><br>
+1. typeof() 函数：<br>
+typeof() 函数用于获取对象的基本类型信息，返回一个描述对象类型的字符字符串。
+它通常用于确定对象的基本存储类型，例如 “double”（双精度浮点数）、“integer”（整数）、“character”（字符）、“logical”（逻辑值）等。
+对于大多数常见的对象类型，typeof() 函数可以给出准确的类型信息，但在某些情况下可能不够详细。<br>
+2. class() 函数：<br>
+class() 函数用于获取对象的类别信息，返回一个描述对象类别的字符字符串或字符向量。
+它通常用于确定对象的高级类型，即对象所属的类别或类。
+在面向对象编程中，对象的类别定义了对象的属性和方法。通过 class() 函数，你可以确定对象是属于哪个类别，并调用与该类别相关联的方法。
+对于基本数据类型（如数字、字符、逻辑值）或没有明确的类别的对象，class() 函数可能返回一个空字符向量。</p>
+<p>R语言中的变量类型包括以下几种：</p>
+<ul>
+<li>数值型（Numeric）：用于表示数值的变量类型，包括整数和浮点数。</li>
+<li>整数型（Integer）：用于表示整数的变量类型。</li>
+<li>字符型（Character）：用于表示文本字符串的变量类型。</li>
+<li>逻辑型（Logical）：用于表示逻辑值（真或假）的变量类型。</li>
+<li>复数型（Complex）：用于表示复数的变量类型。</li>
+<li>因子型（Factor）：用于表示分类变量的变量类型，具有有限个数的离散取值。</li>
+<li>日期型（Date）：用于表示日期的变量类型。</li>
+<li>时间型（POSIXct）：用于表示日期和时间的变量类型。</li>
+<li>时间型（POSIXlt）：用于表示日期和时间的变量类型，以列表形式存储。</li>
+<li>数组型（Array）：用于存储多维数据的变量类型。</li>
+<li>矩阵型（Matrix）：用于存储二维数据的变量类型。</li>
+<li>列表型（List）：用于存储不同类型元素的变量类型。</li>
+<li>数据框型（Data Frame）：用于存储二维表格数据的变量类型，类似于表格或数据库中的数据结构。</li>
+</ul>
+<p><strong>获取变量的长度</strong><br>
+对于变量来说最重要的属性除了它的类型外还有它的长度，可以使用<strong><em>length</em></strong>函数来确定变量的长度。</p>
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## [1] 1</code></pre>
+</div>
+<div id="总结-2" class="section level2" number="3.5">
+<h2>
+<span class="header-section-number">3.5</span> 总结<a class="anchor" aria-label="anchor" href="#%E6%80%BB%E7%BB%93-2"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li>介绍了R的计算功能</li>
+<li>介绍了R中对象和变量的概念以及变量的命名规则</li>
+<li>介绍了R中变量的属性，及其类型和长度的查看方法</li>
+</ul>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="R-installation.html"><span class="header-section-number">2</span> R的安装与环境的配置</a></div>
+<div class="next"><a href="data-structure.html"><span class="header-section-number">4</span> 数据基本结构</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#object-variable"><span class="header-section-number">3</span> 对象与变量</a></li>
+<li><a class="nav-link" href="#primary-calculation"><span class="header-section-number">3.1</span> 基本运算</a></li>
+<li><a class="nav-link" href="#object"><span class="header-section-number">3.2</span> 对象</a></li>
+<li><a class="nav-link" href="#variable"><span class="header-section-number">3.3</span> 变量</a></li>
+<li><a class="nav-link" href="#attribute-type"><span class="header-section-number">3.4</span> 变量的属性和类型</a></li>
+<li><a class="nav-link" href="#%E6%80%BB%E7%BB%93-2"><span class="header-section-number">3.5</span> 总结</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>R语言入门学习笔记</strong>" was written by 欧阳继华. It was last built on 2023-07-21.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>

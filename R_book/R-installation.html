@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>2 R的安装与环境的配置 | R语言入门学习笔记</title>
+<meta name="author" content="欧阳继华">
+<meta name="description" content="R语言是一款完全免费且开源的软件，它的开源许可证是GNU通用公共许可证（GPL），这意味着任何人都可以自由地使用、复制、修改和发布R语言的源代码，甚至可以将其用于商业用途。  图1.1: GPL第三版图标  和python等其他语言一样，使用R语言来工作首先需要准备好R语言的解释器和编辑器。...">
+<meta name="generator" content="bookdown 0.34 with bs4_book()">
+<meta property="og:title" content="2 R的安装与环境的配置 | R语言入门学习笔记">
+<meta property="og:type" content="book">
+<meta property="og:description" content="R语言是一款完全免费且开源的软件，它的开源许可证是GNU通用公共许可证（GPL），这意味着任何人都可以自由地使用、复制、修改和发布R语言的源代码，甚至可以将其用于商业用途。  图1.1: GPL第三版图标  和python等其他语言一样，使用R语言来工作首先需要准备好R语言的解释器和编辑器。...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2 R的安装与环境的配置 | R语言入门学习笔记">
+<meta name="twitter:description" content="R语言是一款完全免费且开源的软件，它的开源许可证是GNU通用公共许可证（GPL），这意味着任何人都可以自由地使用、复制、修改和发布R语言的源代码，甚至可以将其用于商业用途。  图1.1: GPL第三版图标  和python等其他语言一样，使用R语言来工作首先需要准备好R语言的解释器和编辑器。...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.5.0/transition.js"></script><script src="libs/bs3compat-0.5.0/tabs.js"></script><script src="libs/bs3compat-0.5.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<style type="text/css">
+    /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+        }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
+  </style>
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">R语言入门学习笔记</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">前言</a></li>
+<li><a class="" href="%E4%BD%9C%E8%80%85%E7%AE%80%E4%BB%8B.html">作者简介</a></li>
+<li class="book-part">基础篇</li>
+<li><a class="" href="DataScience-and-R.html"><span class="header-section-number">1</span> 数据科学与R语言</a></li>
+<li><a class="active" href="R-installation.html"><span class="header-section-number">2</span> R的安装与环境的配置</a></li>
+<li><a class="" href="object-variable.html"><span class="header-section-number">3</span> 对象与变量</a></li>
+<li><a class="" href="data-structure.html"><span class="header-section-number">4</span> 数据基本结构</a></li>
+<li><a class="" href="%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE.html">参考文献</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="R-installation" class="section level1" number="2">
+<h1>
+<span class="header-section-number">2</span> R的安装与环境的配置<a class="anchor" aria-label="anchor" href="#R-installation"><i class="fas fa-link"></i></a>
+</h1>
+<p>R语言是一款完全免费且开源的软件，它的开源许可证是<a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU通用公共许可证（GPL）</a>，这意味着任何人都可以自由地使用、复制、修改和发布R语言的源代码，甚至可以将其用于商业用途。</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:unnamed-chunk-1"></span>
+<img src="images/GPL_V3.png" alt="GPL第三版图标" width="80%" height="80%"><p class="caption">
+图1.1: GPL第三版图标
+</p>
+</div>
+<p>和python等其他语言一样，使用R语言来工作首先需要准备好R语言的<strong>解释器</strong>和<strong>编辑器</strong>。</p>
+<p><strong>解释器（Interpreter）</strong><em>是一种程序，可以解释和执行源代码。当你运行一个使用解释器编写的程序时，解释器会逐行解释源代码，并将其转换为计算机可以理解的语言，然后立即执行,这意味着开发人员可以通过逐行调试程序，快速查找和修复错误。</em><br><strong>编辑器（Editor）</strong><em>则是一种用于编写和编辑代码的程序。它提供了一种方便的方式来编辑源代码，包括高亮显示语法、自动完成和代码折叠等功能。编辑器还可以帮助开发人员在程序中添加注释、格式化代码等，从而提高代码的可读性和可维护性。</em><br><strong>集成开发环境（Integrated Development Environment，IDE）</strong><em>是一种更为全面的开发工具，它包含了编辑器以外的多个工具，如调试器、编译器、版本控制等等，这些工具可以协同工作，提高开发效率。IDE通常支持多种编程语言，并提供了许多与开发相关的功能，如代码自动完成、集成式调试、图形化界面设计器等等。</em></p>
+<p>R语言的解释器就是R,而R代码的编写我们推荐使用主流的IDE—RStudio,如果你熟悉python等其他语言的话，应该很容易理解R和Rstudio的关系就好比python和Pycharm的关系，不过不同的是，python的编辑器有很多，除了Pycharm外还有VS code,Eclipse,Sublime等等，而R的编辑器最主要的就是Rstudio，甚至我都没有听过R有什么其他的编辑器（也有可能是我孤陋寡闻了），原因很简单，Rstudio作为一款非常成熟和优秀的软件已经在R语言IDE中占据了主导地位！<br>
+我们来看看它的官网介绍：<br><em>Used by millions of people weekly, the RStudio integrated development environment (IDE) is a set of tools built to help you be more productive with R and Python. It includes a console, syntax-highlighting editor that supports direct code execution. It also features tools for plotting, viewing history, debugging and managing your workspace.</em></p>
+<p>接下来，就让我们在自己的电脑上安装R和RStudio吧！</p>
+<div id="R_interpreter" class="section level2" number="2.1">
+<h2>
+<span class="header-section-number">2.1</span> 安装R<a class="anchor" aria-label="anchor" href="#R_interpreter"><i class="fas fa-link"></i></a>
+</h2>
+<p>R的安装特别简单，和在电脑上安装其他应用程序几乎没有什么区别，可以直接在官网<a href="https://cloud.r-project.org/" class="uri">https://cloud.r-project.org/</a>上下载自己电脑配置对应的R版本：</p>
+<div class="inline-figure"><img src="images/R_home.png" width="80%" height="80%" style="display: block; margin: auto;"></div>
+然后点击安装，一路默认就行。 安装完成后双击在桌面出现的R图标，出现R的控制台，在其中输入如下代码：<code>print("Hello world")</code>，换行键，如果能够出现正确的结果<code>Hello world</code>，则说明R的解释器安装成功。<br><div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:unnamed-chunk-3"></span>
+<img src="images/hello_world.jpg" alt="验证R是否安装成功" width="80%" height="80%"><p class="caption">
+图2.1: 验证R是否安装成功
+</p>
+</div>
+<p>怎么样，是不是超级简单！<br>
+接下来我们进行R的IDE——RStudio的安装。</p>
+</div>
+<div id="rstudio_installation" class="section level2" number="2.2">
+<h2>
+<span class="header-section-number">2.2</span> 安装RStudio<a class="anchor" aria-label="anchor" href="#rstudio_installation"><i class="fas fa-link"></i></a>
+</h2>
+<p>RStudio的安装比R的安装稍微复杂一点点，不过也很简单！<br>
+同样，先去<a href="https://posit.co/download/rstudio-desktop/">RStudio官网</a>下载适合自己电脑的桌面版软件，然后执行安装程序。</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:unnamed-chunk-4"></span>
+<img src="images/rstudio_installation.jpg" alt="下载RStudio" width="80%" height="80%"><p class="caption">
+图2.2: 下载RStudio
+</p>
+</div>
+<p>一些其他人给出的RStudio在安装过程中的注意事项：<br><!--  这段Rmarkdown语法使用了HTML标记语言，用于添加一个带有特殊样式的“提示框”，用于强调一些重要信息或指导用户做某些事情。 --></p>
+<div class="rmdnote">
+<ul>
+<li>电脑开机时的用户名不要用中文，否则Rstudio可能会杠上中文用户名</li>
+<li>尽量安装在非系统盘，比如，可以选择安装在D盘</li>
+<li>安装路径不要有中文和空格。比如，这样就比较好
+<ul>
+<li><code>D:/R</code></li>
+<li><code>D:/Rstudio</code></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>上面出现的问题并不一定会出现，但是我们能避免就尽量避免，毕竟君子不立于危墙之下嘛。</p>
+</div>
+<div id="RStudio_configuration" class="section level2" number="2.3">
+<h2>
+<span class="header-section-number">2.3</span> RStudio的基本配置<a class="anchor" aria-label="anchor" href="#RStudio_configuration"><i class="fas fa-link"></i></a>
+</h2>
+<p>安装完RStudio之后先别急着使用，我们先做一些简单的设置：</p>
+<div id="change-mirror" class="section level3" number="2.3.1">
+<h3>
+<span class="header-section-number">2.3.1</span> 更改镜像源<a class="anchor" aria-label="anchor" href="#change-mirror"><i class="fas fa-link"></i></a>
+</h3>
+<p>RStudio默认的镜像源是国外的<a href="https://cran.r-project.org/mirrors.html">CRAN</a>,可能会导致下载速度慢甚至下载失败，我们可以将其改成国内镜像源，操作方法： 进入RStudio界面后，选择 Tools &gt; Global options &gt; packages &gt; Change，然后选择一个离自身位置最近的镜像即可。</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:unnamed-chunk-5"></span>
+<img src="images/RStudio_mirror.jpg" alt="RStudio更改镜像源" width="80%" height="80%"><p class="caption">
+图2.3: RStudio更改镜像源
+</p>
+</div>
+<p>在这里，我选择了自身所在的广州的镜像作为RStudio镜像源。</p>
+</div>
+<div id="change-code" class="section level3" number="2.3.2">
+<h3>
+<span class="header-section-number">2.3.2</span> 更改字符编码<a class="anchor" aria-label="anchor" href="#change-code"><i class="fas fa-link"></i></a>
+</h3>
+为了防止出现中文乱码问题，建议提前将RStudio中的编码方式改成utf-8,选择Tools &gt; Global options &gt; Code，在Saving选项卡下面选择Change,再选择字符的编码方式。
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:unnamed-chunk-6"></span>
+<img src="images/rstudio_utf8.jpg" alt="RStudio更改编码方式" height="100%"><p class="caption">
+图2.4: RStudio更改编码方式
+</p>
+</div>
+</div>
+<div id="change-appearance" class="section level3" number="2.3.3">
+<h3>
+<span class="header-section-number">2.3.3</span> 更改外观<a class="anchor" aria-label="anchor" href="#change-appearance"><i class="fas fa-link"></i></a>
+</h3>
+<p>RStudio当然具备更改编辑器外观的功能，选择Tools &gt; Global options &gt; Appearance</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:unnamed-chunk-7"></span>
+<img src="images/RStudio_appearance.jpg" alt="RStudio更改编码方式" height="100%"><p class="caption">
+图2.5: RStudio更改编码方式
+</p>
+</div>
+<p>在这里可以选择自己喜欢的主题，字体，字体大小，编码风格等。</p>
+</div>
+<div id="other_problems" class="section level3" number="2.3.4">
+<h3>
+<span class="header-section-number">2.3.4</span> 其他问题<a class="anchor" aria-label="anchor" href="#other_problems"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>如果显示我的系统不能兼容64位的RStudio，可以在<a href="https://rstudio.com/products/rstudio/older-versions/" class="uri">https://rstudio.com/products/rstudio/older-versions/</a>上找到旧的版本</li>
+<li>用户名为中文名时可能会导致RStudio无法正常运行，这时建议新建一个账户用于安装RStudio</li>
+<li>若RStudio长时间使用后变得卡顿，可以在Tools &gt; Global options &gt; General中关闭相关的自动储存选项。</li>
+</ul>
+</div>
+</div>
+<div id="how-to-use-rstudio" class="section level2" number="2.4">
+<h2>
+<span class="header-section-number">2.4</span> RStudio的使用<a class="anchor" aria-label="anchor" href="#how-to-use-rstudio"><i class="fas fa-link"></i></a>
+</h2>
+<p>光说不练假把式，下面我们来简单介绍一下RStudio的基本使用（阅读本节的过程中请打开自己的RStudio对照着练习）。</p>
+<div id="operation-panel" class="section level3" number="2.4.1">
+<h3>
+<span class="header-section-number">2.4.1</span> 操作界面<a class="anchor" aria-label="anchor" href="#operation-panel"><i class="fas fa-link"></i></a>
+</h3>
+<p>打开RStudio,显示界面如下：</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:rstudio-panel"></span>
+<img src="images/RStudio_panel.jpg" alt="RStudio操作界面" height="50%"><p class="caption">
+图2.6: RStudio操作界面
+</p>
+</div>
+<p>如图<a href="R-installation.html#fig:rstudio-panel">2.6</a>所示，RStudio的操作界面可分为四个面板：</p>
+<ul>
+<li>左上角是Editor窗口，用来编写代码</li>
+<li>左下角是Console窗口，可以键入命令</li>
+<li>右上角是Environment和History窗口，保存当前存储的数据和历史命令记录等</li>
+<li>右下角是Plot和Help窗口，用于显示绘制图片和帮助文档</li>
+</ul>
+<p>想要运行一段代码，直接在左下角的console输入，然后按换行键即可。</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fl">1</span><span class="op">+</span><span class="fl">1</span></span></code></pre></div>
+<pre><code>## [1] 2</code></pre>
+</div>
+<div id="script-run" class="section level3" number="2.4.2">
+<h3>
+<span class="header-section-number">2.4.2</span> 运行脚本<a class="anchor" aria-label="anchor" href="#script-run"><i class="fas fa-link"></i></a>
+</h3>
+运行代码最好的方法是，通过Rstudio菜单栏依此点击File &gt; New File &gt; R Script 来创建一个新的脚本。脚本文件通常以.R作为文件的后缀名。脚本文件的好处在于我们可以在其它时间修改和重新运行它。养成用脚本写代码的习惯后，今后所有的工作都有案可查，并且具有可重复性。
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:unnamed-chunk-9"></span>
+<img src="images/run_script.jpg" alt="RStudio创建脚本" height="50%"><p class="caption">
+图2.7: RStudio创建脚本
+</p>
+</div>
+<p><strong>如何运行脚本？</strong></p>
+<ol style="list-style-type: decimal">
+<li>
+<strong>运行单行脚本</strong> 将光标移至该单行，点击右上角Run键，或者在键盘上按下Ctrl+Enter键</li>
+<li>
+<strong>运行多行脚本</strong> 用光标选中所要运行的脚本，点击右上角的Run键，或者在键盘上按下Ctrl+Enter键</li>
+<li>
+<strong>运行全部脚本</strong>
+点击右上角的Source键，或者在键盘上按下Ctrl+shift+Enter键</li>
+</ol>
+<p>写好的脚本可以使用Ctrl + S 保存在指定位置，下次需要使用时直接打开运行即可。</p>
+</div>
+<div id="RStudio-shortcut-key" class="section level3" number="2.4.3">
+<h3>
+<span class="header-section-number">2.4.3</span> RStudio中常用的快捷键<a class="anchor" aria-label="anchor" href="#RStudio-shortcut-key"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>功能</th>
+<th>按键</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>添加和取消代码注释</td>
+<td>Ctrl + Shift + C</td>
+</tr>
+<tr class="even">
+<td>添加管道符号</td>
+<td>Ctrl + Shift + M</td>
+</tr>
+<tr class="odd">
+<td>插入赋值符号</td>
+<td>Alt + -</td>
+</tr>
+<tr class="even">
+<td>执行代码块</td>
+<td>Ctrl + Enter</td>
+</tr>
+<tr class="odd">
+<td>执行全部代码</td>
+<td>Ctrl + Shift + Enter</td>
+</tr>
+<tr class="even">
+<td>查看RStudio的快捷键清单</td>
+<td>Alt + Shift + K</td>
+</tr>
+<tr class="odd">
+<td>在Rmarkdown文件中插入代码段</td>
+<td>Ctrl + Alt + I</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div id="总结-1" class="section level2" number="2.5">
+<h2>
+<span class="header-section-number">2.5</span> 总结<a class="anchor" aria-label="anchor" href="#%E6%80%BB%E7%BB%93-1"><i class="fas fa-link"></i></a>
+</h2>
+<p>本节的主要内容：</p>
+<ul>
+<li>安装R</li>
+<li>安装RStudio</li>
+<li>RStudio的基本使用</li>
+</ul>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="DataScience-and-R.html"><span class="header-section-number">1</span> 数据科学与R语言</a></div>
+<div class="next"><a href="object-variable.html"><span class="header-section-number">3</span> 对象与变量</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#R-installation"><span class="header-section-number">2</span> R的安装与环境的配置</a></li>
+<li><a class="nav-link" href="#R_interpreter"><span class="header-section-number">2.1</span> 安装R</a></li>
+<li><a class="nav-link" href="#rstudio_installation"><span class="header-section-number">2.2</span> 安装RStudio</a></li>
+<li>
+<a class="nav-link" href="#RStudio_configuration"><span class="header-section-number">2.3</span> RStudio的基本配置</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#change-mirror"><span class="header-section-number">2.3.1</span> 更改镜像源</a></li>
+<li><a class="nav-link" href="#change-code"><span class="header-section-number">2.3.2</span> 更改字符编码</a></li>
+<li><a class="nav-link" href="#change-appearance"><span class="header-section-number">2.3.3</span> 更改外观</a></li>
+<li><a class="nav-link" href="#other_problems"><span class="header-section-number">2.3.4</span> 其他问题</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#how-to-use-rstudio"><span class="header-section-number">2.4</span> RStudio的使用</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#operation-panel"><span class="header-section-number">2.4.1</span> 操作界面</a></li>
+<li><a class="nav-link" href="#script-run"><span class="header-section-number">2.4.2</span> 运行脚本</a></li>
+<li><a class="nav-link" href="#RStudio-shortcut-key"><span class="header-section-number">2.4.3</span> RStudio中常用的快捷键</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#%E6%80%BB%E7%BB%93-1"><span class="header-section-number">2.5</span> 总结</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>R语言入门学习笔记</strong>" was written by 欧阳继华. It was last built on 2023-07-21.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>

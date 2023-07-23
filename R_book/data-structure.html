@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>4 数据基本结构 | R语言入门学习笔记</title>
+<meta name="author" content="欧阳继华">
+<meta name="description" content="前面我们已经介绍过向量，它是R中最基本的数据结构，这章我们来认识一下R中其他几种常见的数据结构 矩阵 列表 数据框  4.1 矩阵 矩阵可以存储行(row)和列(column)二维的数据。它实际上是向量的另一种表现形式，也就说它的本质还是向量，一维的向量用二维的方式呈现。 在R语言中通过matrix函数来创建矩阵： matrix(c(2,4,6,3,7,8), nrow = 2, ncol...">
+<meta name="generator" content="bookdown 0.34 with bs4_book()">
+<meta property="og:title" content="4 数据基本结构 | R语言入门学习笔记">
+<meta property="og:type" content="book">
+<meta property="og:description" content="前面我们已经介绍过向量，它是R中最基本的数据结构，这章我们来认识一下R中其他几种常见的数据结构 矩阵 列表 数据框  4.1 矩阵 矩阵可以存储行(row)和列(column)二维的数据。它实际上是向量的另一种表现形式，也就说它的本质还是向量，一维的向量用二维的方式呈现。 在R语言中通过matrix函数来创建矩阵： matrix(c(2,4,6,3,7,8), nrow = 2, ncol...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="4 数据基本结构 | R语言入门学习笔记">
+<meta name="twitter:description" content="前面我们已经介绍过向量，它是R中最基本的数据结构，这章我们来认识一下R中其他几种常见的数据结构 矩阵 列表 数据框  4.1 矩阵 矩阵可以存储行(row)和列(column)二维的数据。它实际上是向量的另一种表现形式，也就说它的本质还是向量，一维的向量用二维的方式呈现。 在R语言中通过matrix函数来创建矩阵： matrix(c(2,4,6,3,7,8), nrow = 2, ncol...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.5.0/transition.js"></script><script src="libs/bs3compat-0.5.0/tabs.js"></script><script src="libs/bs3compat-0.5.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<style type="text/css">
+    /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+        }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
+  </style>
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">R语言入门学习笔记</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">前言</a></li>
+<li><a class="" href="%E4%BD%9C%E8%80%85%E7%AE%80%E4%BB%8B.html">作者简介</a></li>
+<li class="book-part">基础篇</li>
+<li><a class="" href="DataScience-and-R.html"><span class="header-section-number">1</span> 数据科学与R语言</a></li>
+<li><a class="" href="R-installation.html"><span class="header-section-number">2</span> R的安装与环境的配置</a></li>
+<li><a class="" href="object-variable.html"><span class="header-section-number">3</span> 对象与变量</a></li>
+<li><a class="active" href="data-structure.html"><span class="header-section-number">4</span> 数据基本结构</a></li>
+<li><a class="" href="%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE.html">参考文献</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="data-structure" class="section level1" number="4">
+<h1>
+<span class="header-section-number">4</span> 数据基本结构<a class="anchor" aria-label="anchor" href="#data-structure"><i class="fas fa-link"></i></a>
+</h1>
+<p>前面我们已经介绍过向量，它是R中最基本的数据结构，这章我们来认识一下R中其他几种常见的数据结构</p>
+<ul>
+<li>矩阵</li>
+<li>列表</li>
+<li>数据框</li>
+</ul>
+<div id="matrix" class="section level2" number="4.1">
+<h2>
+<span class="header-section-number">4.1</span> 矩阵<a class="anchor" aria-label="anchor" href="#matrix"><i class="fas fa-link"></i></a>
+</h2>
+<p>矩阵可以存储行(row)和列(column)二维的数据。它实际上是向量的另一种表现形式，也就说它的本质还是向量，一维的向量用二维的方式呈现。<br>
+在R语言中通过matrix函数来创建矩阵：</p>
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>,<span class="fl">4</span>,<span class="fl">6</span>,<span class="fl">3</span>,<span class="fl">7</span>,<span class="fl">8</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">2</span>, ncol <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    2    6    7
+## [2,]    4    3    8</code></pre>
+<p>默认矩阵的排列方向是按列从左往右排列，当然，也可以按行从上往下排列，只需要添加byrow参数即可：</p>
+<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>,<span class="fl">4</span>,<span class="fl">6</span>,<span class="fl">3</span>,<span class="fl">7</span>,<span class="fl">8</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">2</span>, ncol <span class="op">=</span> <span class="fl">3</span>, byrow <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    2    4    6
+## [2,]    3    7    8</code></pre>
+<p>矩阵的相关属性如下：</p>
+<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">m</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>,<span class="fl">4</span>,<span class="fl">6</span>,<span class="fl">3</span>,<span class="fl">7</span>,<span class="fl">8</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">2</span>, ncol <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="va">m</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## [1] "matrix" "array"</code></pre>
+<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">m</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## [1] 6</code></pre>
+<div class="sourceCode" id="cb35"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/dim.html">dim</a></span><span class="op">(</span><span class="va">m</span><span class="op">)</span><span class="co">#矩阵的维度</span></span></code></pre></div>
+<pre><code>## [1] 2 3</code></pre>
+<p><font color="#90CBFB"><b>个人理解：</b></font><strong>矩阵其实就是将一维的向量平铺开来，展示成二维的形式，所以矩阵中的元素全部是同一类型的。</strong></p>
+</div>
+<div id="list" class="section level2" number="4.2">
+<h2>
+<span class="header-section-number">4.2</span> 列表<a class="anchor" aria-label="anchor" href="#list"><i class="fas fa-link"></i></a>
+</h2>
+<p>列表可以理解成多个向量的集合。<br>
+在R中可以使用list函数来创建列表：</p>
+<div class="sourceCode" id="cb37"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">list1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span></span>
+<span>  a <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">5</span>, <span class="fl">10</span><span class="op">)</span>,</span>
+<span>  b <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"I"</span>, <span class="st">"love"</span>, <span class="st">"R"</span>, <span class="st">"language"</span>, <span class="st">"!"</span><span class="op">)</span>,</span>
+<span>  c <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">TRUE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span><span class="va">list1</span></span></code></pre></div>
+<pre><code>## $a
+## [1]  5 10
+## 
+## $b
+## [1] "I"        "love"     "R"        "language" "!"       
+## 
+## $c
+## [1]  TRUE  TRUE FALSE  TRUE</code></pre>
+<div class="inline-table"><table class="table table-sm">
+<colgroup>
+<col width="33%">
+<col width="33%">
+<col width="33%">
+</colgroup>
+<thead><tr class="header">
+<th>异同</th>
+<th>向量</th>
+<th>列表</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>相同点</td>
+<td>元素之间用逗号隔开</td>
+<td>元素之间用逗号隔开</td>
+</tr>
+<tr class="even">
+<td>不同点</td>
+<td>元素是单个值，每个元素的数据类型必须相同</td>
+<td>元素可以是向量矩阵或者列表</td>
+</tr>
+</tbody>
+</table></div>
+<p>列表的属性如下：</p>
+<div class="sourceCode" id="cb39"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="va">list1</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## [1] "list"</code></pre>
+<div class="sourceCode" id="cb41"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">list1</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## [1] 3</code></pre>
+</div>
+<div id="dataframe" class="section level2" number="4.3">
+<h2>
+<span class="header-section-number">4.3</span> 数据框<a class="anchor" aria-label="anchor" href="#dataframe"><i class="fas fa-link"></i></a>
+</h2>
+<p>数据框其实是一种特殊形式的列表，即如果列表中的元素是<strong>等长的向量</strong>那么这样的列表就是一个数据框。数据框类似于我们经常用的excel表格，由于数据框融合了向量、列表和矩阵的特性，所以在数据科学的统计建模和可视化中运用非常广泛。<br>
+在R中，使用<strong>data.frame</strong>函数来创建数据框：</p>
+<div class="sourceCode" id="cb43"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span></span>
+<span>  name      <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Alice"</span>, <span class="st">"Bob"</span>, <span class="st">"Carl"</span>, <span class="st">"Dave"</span><span class="op">)</span>,</span>
+<span>  age       <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">23</span>, <span class="fl">34</span>, <span class="fl">23</span>, <span class="fl">25</span><span class="op">)</span>,</span>
+<span>  marriage  <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span><span class="op">)</span>,</span>
+<span>  color     <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"red"</span>, <span class="st">"blue"</span>, <span class="st">"orange"</span>, <span class="st">"purple"</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span><span class="va">df</span></span></code></pre></div>
+<pre><code>##    name age marriage  color
+## 1 Alice  23     TRUE    red
+## 2   Bob  34    FALSE   blue
+## 3  Carl  23     TRUE orange
+## 4  Dave  25    FALSE purple</code></pre>
+<p>数据框的属性如下：</p>
+<div class="sourceCode" id="cb45"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="va">df</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## [1] "data.frame"</code></pre>
+<div class="sourceCode" id="cb47"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">df</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## [1] 4</code></pre>
+<div class="sourceCode" id="cb49"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">ncol</a></span><span class="op">(</span><span class="va">df</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## [1] 4</code></pre>
+</div>
+<div id="总结-3" class="section level2" number="4.4">
+<h2>
+<span class="header-section-number">4.4</span> 总结<a class="anchor" aria-label="anchor" href="#%E6%80%BB%E7%BB%93-3"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li>介绍了矩阵的定义，创建方法，属性</li>
+<li>介绍了列表的定义，创建方法，属性</li>
+<li>介绍了数据框的定义，创建方法，属性<strong>（重点）</strong>
+</li>
+</ul>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="object-variable.html"><span class="header-section-number">3</span> 对象与变量</a></div>
+<div class="next"><a href="%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE.html">参考文献</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#data-structure"><span class="header-section-number">4</span> 数据基本结构</a></li>
+<li><a class="nav-link" href="#matrix"><span class="header-section-number">4.1</span> 矩阵</a></li>
+<li><a class="nav-link" href="#list"><span class="header-section-number">4.2</span> 列表</a></li>
+<li><a class="nav-link" href="#dataframe"><span class="header-section-number">4.3</span> 数据框</a></li>
+<li><a class="nav-link" href="#%E6%80%BB%E7%BB%93-3"><span class="header-section-number">4.4</span> 总结</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>R语言入门学习笔记</strong>" was written by 欧阳继华. It was last built on 2023-07-21.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>
