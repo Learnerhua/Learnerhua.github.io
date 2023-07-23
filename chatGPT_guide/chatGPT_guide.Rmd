@@ -163,8 +163,8 @@ knitr::include_graphics(c("images/chatGPT.jpg"))
 ## 辅助插件 {#plugin}
 ChatGPT火爆后许多相关的浏览器插件也被迅速开发出来，这里我以谷歌历览器为例，推荐几款常用的chatGPT插件。不熟悉浏览器插件使用方法的可以先去看一下[官方教程](https://support.google.com/chromebook/answer/2588006?hl=zh-Hans)
 
-|名字|描述|
-|----|----|
+|名字|描述|dfvgdf|
+|----|----|------|
 |ChatGPT for Google|在搜索引擎结果中同时显示ChatGPT的回答|
 |WebChatGPT|使用来自网络的相关结果增强您的 ChatGPT 提示|
 |Monica|ChatGPT 驱动的副驾驶，能够回答您的问题或帮您撰写电子邮件。适用于所有网站。|  
