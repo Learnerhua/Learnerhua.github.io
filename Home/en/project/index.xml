@@ -5,12 +5,26 @@
     <link>https://learnerhua.github.io/Home/en/project/</link>
       <atom:link href="https://learnerhua.github.io/Home/en/project/index.xml" rel="self" type="application/rss+xml" />
     <description>Projects</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 25 May 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 01 Jul 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://learnerhua.github.io/Home/media/icon_hu40138741cec17eb9d25e54fefd29c4ee_319816_512x512_fill_lanczos_center_3.png</url>
       <title>Projects</title>
       <link>https://learnerhua.github.io/Home/en/project/</link>
     </image>
+    
+    <item>
+      <title>The impact of the existence or absence of CM on fish’s intestinal microbiota environment</title>
+      <link>https://learnerhua.github.io/Home/en/project/microbiomics/</link>
+      <pubDate>Fri, 01 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://learnerhua.github.io/Home/en/project/microbiomics/</guid>
+      <description>&lt;p&gt;The chitin-based peritrophic matrix (PM) plays a crucial role in gut immunity and digestion in invertebrates. Traditionally, PM was believed to be absent in all vertebrates, however, a recently found PM-like chitinous membrane (CM) in fishes has challenged this notion and has the potential to enhance our understanding of vertebrate gut physiology and structural evolution.&lt;/p&gt;
+&lt;p&gt;In this project, our team aimed to investigate if the existence of the CM in  zebrafish gut would have an benefical or harmful impact on the survival of the fish, these two may have no correlation of course. To fullfill our goal, firstly, We created a complete genetic PM/CM knockout model through the prevalent &lt;a href=&#34;https://en.wikipedia.org/wiki/CRISPR&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CRISPR-Cas9&lt;/a&gt; gene editing technology. Then, we designed a series of rigorous experiments to test the influences of the absence of the CM on the fishes, including ingestion
+behavior, microbial homeostasis, epithelial renewal, digestion, growth and longevity.&lt;/p&gt;
+&lt;p&gt;As a bioinformatics Mphil candidate, I was entrusted with the mission of designing a accurate and stable pipeline to analyse the 16S amplicon sequencing data which was a complexed work obviously. The first challenge we encountered was how to select a suitable platform for conducting our data analysis as there are many microbial data analysis platforms in the field. we ultimately decided to integrate the &lt;a href=&#34;https://www.drive5.com/usearch/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;USEARCH&lt;/a&gt; and &lt;a href=&#34;https://qiime2.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;QIIME 2&lt;/a&gt; for our data analysis after careful comparison. Specifically, USEARCH is known for its simplicity and refinement while QIIME 2 is powerful and comprehensive, they complement each other excellently. In fact, we solely utilized USEARCH to generate the feature table, which was the central step in the entire process and subsequent analyses were primarily conducted using relevant plugins from QIIME 2.
+In order to enhance the reproducibility of the data analysis and facilitate potential interested researchers, I developed a simple software called &amp;ldquo;LuckyMicrobe.&amp;rdquo; Detailed information about this software can be found on my GitHub page(&lt;a href=&#34;https://github.com/Learnerhua/LuckyMicrobe-testing-&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/Learnerhua/LuckyMicrobe-testing-&lt;/a&gt; ), though it is still in the experimental stage.&lt;/p&gt;
+&lt;p&gt;Currently, this research topic is still being further extended, and our team has a continuous demand for data analysis. As a result, this project remains ongoing, and I continue to improve my software constantly.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Recombinant Expression of PFO Protein through Genetic Engineering</title>
@@ -26,7 +40,7 @@
     <item>
       <title>The Synthesis of bio-nano material: MOFs(Metal-Organic Frameworks)</title>
       <link>https://learnerhua.github.io/Home/en/project/mof_systhesis/</link>
-      <pubDate>Mon, 25 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 12 Mar 2019 00:00:00 +0000</pubDate>
       <guid>https://learnerhua.github.io/Home/en/project/mof_systhesis/</guid>
       <description>&lt;p&gt;Pathogenic bacteria are responsible for causing grave concerns regarding human health due to the prevalence of infectious diseases. In the realm of clinical bacterial infections, antibiotics serve as the simplest and most efficacious drugs. Nonetheless, widespread evidence indicates that the excessive and inappropriate utilization of antibiotics has given rise to drug resistance and bacterial imbalance. In particular, the emergence of robust drug resistance in bacteria, commonly known as &amp;ldquo;super bacteria,&amp;rdquo; has evolved into a pressing matter. As a result, the need to swiftly develop potent and eco-friendly antibacterial substances has become paramount and demands immediate attention.&lt;/p&gt;
 &lt;p&gt;Silver-based inorganic and organic–inorganic composite materials have been widely exploited to show strong inhibitory or bactericidal effects on microbes. They have been increasingly used in many normal commodities and medical equipment. Lately, some pertinent metal–organic frameworks (MOFs) have also appeared as novel antibacterial agents that exhibit some unique traits including a wide antibacterial spectrum, long periods of persistence, and promising efficacy. Compared to conventional drugs, MOF-based antibacterial agents have many advantages. The active sites of metal ions in the MOFs are effectively wrapped by the organic ligands and evenly distributed across the overall material, enabling a sustained release of metal ions to avoid the toxicity caused by a burst release of metal ions.&lt;/p&gt;
