@@ -143,6 +143,29 @@ Figure 1: A fancy pie chart.
     </item>
     
     <item>
+      <title>Recombinant Expression of PFO Protein through Genetic Engineering</title>
+      <link>https://learnerhua.github.io/Home/en/project/undergraduate_thesis/</link>
+      <pubDate>Mon, 25 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://learnerhua.github.io/Home/en/project/undergraduate_thesis/</guid>
+      <description>&lt;p&gt;Produced by Pathogenic bacteria are responsible for causing grave concerns regarding human health due to the prevalence of infectious diseases. In the realm of clinical bacterial infections, antibiotics serve as the simplest and most efficacious drugs. Nonetheless, widespread evidence indicates that the excessive and inappropriate utilization of antibiotics has given rise to drug resistance and bacterial imbalance. In particular, the emergence of robust drug resistance in bacteria, commonly known as &amp;ldquo;super bacteria,&amp;rdquo; has evolved into a pressing matter. As a result, the need to swiftly develop potent and eco-friendly antibacterial substances has become paramount and demands immediate attention.&lt;/p&gt;
+&lt;p&gt;We inserted the gene fragment expressing the PFO protein into the pET-28a plasmid vector, and then transformed the vector into BL21 (DE3) bacteria. Subsequently, we induced expression and conducted isolation and purification under suitable conditions. The protein was concentrated to the desired concentration, and its biological activity was determined. The results showed that the target protein was successfully expressed in large quantities, achieving a certain level of purity and concentration through separation, purification, and concentration steps. Additionally, we explored a series of optimal experimental conditions for the expression of PFO, laying a solid foundation for the follow-up experiments.&lt;/p&gt;
+&lt;p&gt;Finally, we drawed a conclusion that the recombinant PFO can be induced to be expressed in large quantities in Escherichia coli and its expression can be greatly improved after experimental optimization. However, its activity in vitro remains to be further verified.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The Synthesis of bio-nano material: MOFs(Metal-Organic Frameworks)</title>
+      <link>https://learnerhua.github.io/Home/en/project/mof_systhesis/</link>
+      <pubDate>Mon, 25 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://learnerhua.github.io/Home/en/project/mof_systhesis/</guid>
+      <description>&lt;p&gt;Pathogenic bacteria are responsible for causing grave concerns regarding human health due to the prevalence of infectious diseases. In the realm of clinical bacterial infections, antibiotics serve as the simplest and most efficacious drugs. Nonetheless, widespread evidence indicates that the excessive and inappropriate utilization of antibiotics has given rise to drug resistance and bacterial imbalance. In particular, the emergence of robust drug resistance in bacteria, commonly known as &amp;ldquo;super bacteria,&amp;rdquo; has evolved into a pressing matter. As a result, the need to swiftly develop potent and eco-friendly antibacterial substances has become paramount and demands immediate attention.&lt;/p&gt;
+&lt;p&gt;Silver-based inorganic and organic–inorganic composite materials have been widely exploited to show strong inhibitory or bactericidal effects on microbes. They have been increasingly used in many normal commodities and medical equipment. Lately, some pertinent metal–organic frameworks (MOFs) have also appeared as novel antibacterial agents that exhibit some unique traits including a wide antibacterial spectrum, long periods of persistence, and promising efficacy. Compared to conventional drugs, MOF-based antibacterial agents have many advantages. The active sites of metal ions in the MOFs are effectively wrapped by the organic ligands and evenly distributed across the overall material, enabling a sustained release of metal ions to avoid the toxicity caused by a burst release of metal ions.&lt;/p&gt;
+&lt;p&gt;In this study, we expanded our investigation into the antibacterial properties of MOFs composed of quaternized carboxylate ligands in combination with Ag+ ions. Two distinct MOFs were successfully synthesized under gentle conditions: a three-dimensional (3D) MOF denoted as [Ag2(Cedcp)]n (designated as 1, with H3CedcpBr representing N-(carboxyethyl)-(3,5-dicarboxyl)-pyridinium bromide), and a two-dimensional (2D) MOF {[Ag4(Cmdcp)2(H2O)4]·4H2O}n (referred to as 2, where H3CmdcpBr signifies N-(carboxymethyl)-(3,5-dicarboxyl)-pyridinium bromide). Notably, MOFs 1 and 2 exhibited exceptional water stability and solubility, alongside potent antimicrobial activity, while also demonstrating favorable biocompatibility.&lt;/p&gt;
+&lt;p&gt;For more details, please click to download the pdf-version article provided above.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Writing technical content in Markdown</title>
       <link>https://learnerhua.github.io/Home/en/post/writing-technical-content/</link>
       <pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate>
@@ -246,7 +269,7 @@ data.head()
 
 
 
-&lt;div id=&#34;chart-196523487&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-239814567&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -256,7 +279,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-196523487&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-239814567&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -753,19 +776,6 @@ $$&lt;/p&gt;
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       <guid>https://learnerhua.github.io/Home/en/project/external-project/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Recombinant expression of PFO protein through genetic engineering methodologies</title>
-      <link>https://learnerhua.github.io/Home/en/project/undergraduate_thesis/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>https://learnerhua.github.io/Home/en/project/undergraduate_thesis/</guid>
-      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
-&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
-&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
-&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
-&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
-</description>
     </item>
     
     <item>
