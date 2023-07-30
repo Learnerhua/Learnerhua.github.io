@@ -2,24 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://learnerhua.github.io/Home/en/</loc>
-    <lastmod>2022-10-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://learnerhua.github.io/Home/en/project/acps/</loc>
-    <lastmod>2022-07-01T00:00:00+00:00</lastmod>
+    <lastmod>2023-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://learnerhua.github.io/Home/en/tag/ongoing/</loc>
-    <lastmod>2022-07-01T00:00:00+00:00</lastmod>
+    <lastmod>2023-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://learnerhua.github.io/Home/en/project/</loc>
-    <lastmod>2022-07-01T00:00:00+00:00</lastmod>
+    <lastmod>2023-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://learnerhua.github.io/Home/en/tags/</loc>
-    <lastmod>2022-07-01T00:00:00+00:00</lastmod>
+    <lastmod>2023-03-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://learnerhua.github.io/Home/en/</loc>
+    <lastmod>2022-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://learnerhua.github.io/Home/en/project/microbiomics/</loc>
@@ -122,14 +122,6 @@
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://learnerhua.github.io/Home/en/project/example/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://learnerhua.github.io/Home/en/project/external-project/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://learnerhua.github.io/Home/en/publication-type/2/</loc>
     <lastmod>2015-09-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -147,6 +139,9 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://learnerhua.github.io/Home/en/admin/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://learnerhua.github.io/Home/en/project/external-project/</loc>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>

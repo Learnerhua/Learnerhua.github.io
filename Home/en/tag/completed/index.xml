@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>completed | Jihua Ouyang</title>
+    <title>Completed | Jihua Ouyang</title>
     <link>https://learnerhua.github.io/Home/en/tag/completed/</link>
       <atom:link href="https://learnerhua.github.io/Home/en/tag/completed/index.xml" rel="self" type="application/rss+xml" />
-    <description>completed</description>
+    <description>Completed</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 25 May 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://learnerhua.github.io/Home/media/icon_hu40138741cec17eb9d25e54fefd29c4ee_319816_512x512_fill_lanczos_center_3.png</url>
-      <title>completed</title>
+      <title>Completed</title>
       <link>https://learnerhua.github.io/Home/en/tag/completed/</link>
     </image>
     
@@ -33,14 +33,6 @@
 &lt;p&gt;In this study, we expanded our investigation into the antibacterial properties of MOFs composed of quaternized carboxylate ligands in combination with Ag+ ions. Two distinct MOFs were successfully synthesized under gentle conditions: a three-dimensional (3D) MOF denoted as [Ag2(Cedcp)]n (designated as 1, with H3CedcpBr representing N-(carboxyethyl)-(3,5-dicarboxyl)-pyridinium bromide), and a two-dimensional (2D) MOF {[Ag4(Cmdcp)2(H2O)4]·4H2O}n (referred to as 2, where H3CmdcpBr signifies N-(carboxymethyl)-(3,5-dicarboxyl)-pyridinium bromide). Notably, MOFs 1 and 2 exhibited exceptional water stability and solubility, alongside potent antimicrobial activity, while also demonstrating favorable biocompatibility.&lt;/p&gt;
 &lt;p&gt;For more details, please click to download the pdf-version article provided above.&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>External Project</title>
-      <link>https://learnerhua.github.io/Home/en/project/external-project/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>https://learnerhua.github.io/Home/en/project/external-project/</guid>
-      <description></description>
     </item>
     
   </channel>
