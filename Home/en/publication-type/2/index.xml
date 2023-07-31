@@ -5,7 +5,7 @@
     <link>https://learnerhua.github.io/Home/en/publication-type/2/</link>
       <atom:link href="https://learnerhua.github.io/Home/en/publication-type/2/index.xml" rel="self" type="application/rss+xml" />
     <description>2</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 01 Sep 2015 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 28 Feb 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://learnerhua.github.io/Home/media/icon_hu40138741cec17eb9d25e54fefd29c4ee_319816_512x512_fill_lanczos_center_3.png</url>
       <title>2</title>
@@ -13,21 +13,41 @@
     </image>
     
     <item>
-      <title>An example journal article</title>
-      <link>https://learnerhua.github.io/Home/en/publication/journal-article/</link>
-      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
-      <guid>https://learnerhua.github.io/Home/en/publication/journal-article/</guid>
+      <title>Differential roles of the fish chitinous membrane in gut barrier immunity and digestive compartments</title>
+      <link>https://learnerhua.github.io/Home/en/publication/cm/</link>
+      <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>https://learnerhua.github.io/Home/en/publication/cm/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
   &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&#34;alert alert-note&#34;&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Two novel mollusk short-form ApeC-containing proteins act as pattern recognition proteins for peptidoglycan</title>
+      <link>https://learnerhua.github.io/Home/en/publication/apec/</link>
+      <pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>https://learnerhua.github.io/Home/en/publication/apec/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
-    Create your slides in Markdown - click the &lt;em&gt;Slides&lt;/em&gt; button to check out the example.
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
   &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code, math, and images&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Water-Stable Silver-Based Metal–Organic Frameworks of Quaternized Carboxylates and Their Antimicrobial Activity</title>
+      <link>https://learnerhua.github.io/Home/en/publication/mofs/</link>
+      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://learnerhua.github.io/Home/en/publication/mofs/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
 </description>
     </item>
     
