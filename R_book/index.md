@@ -1,7 +1,7 @@
 ---
 title: "R语言入门学习笔记"
 author: "欧阳继华"
-date: "2023-07-21"
+date: "2024-10-05"
 site: bookdown::bookdown_site
 knit: bookdown::render_book
 output: bookdown::bs4_book
